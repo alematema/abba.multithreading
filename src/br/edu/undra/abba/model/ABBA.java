@@ -16,6 +16,29 @@ public class ABBA {
 
     public String canObtain(String initial, String target) {
 
+        if (initial == null || target == null) {
+            return "Impossible";
+        }
+
+        if (initial.length() >= target.length()) {
+            return "Impossible";
+        }
+
+        initial = initial.toUpperCase();
+        target = target.toUpperCase();
+
+        for (int i = 0; i < target.length(); i++) {
+            if (target.charAt(i) != 'A' && target.charAt(i) != 'B') {
+                return "Impossible";
+            }
+        }
+
+        for (int i = 0; i < initial.length(); i++) {
+            if (initial.charAt(i) != 'A' && initial.charAt(i) != 'B') {
+                return "Impossible";
+            }
+        }
+
         boolean runInSingleThreadPacketsSmallerThan4194304Size = true;//packet size = 2 raised to the power of (target.length() - initial.length())
 
         String canObtain = "";
