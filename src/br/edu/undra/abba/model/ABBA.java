@@ -16,7 +16,7 @@ public class ABBA {
 
     public String canObtain(String initial, String target) {
 
-        boolean runInSingleThreadPacketsSmallerThan4194304Size = false;//packet size = 2 raised to the power of (target.length() - initial.length())
+        boolean runInSingleThreadPacketsSmallerThan4194304Size = true;//packet size = 2 raised to the power of (target.length() - initial.length())
 
         String canObtain = "";
 
