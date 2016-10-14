@@ -21,11 +21,11 @@ public abstract class BruteForce {
         this.target = target;
     }
     
+    abstract public String tryObtainingTargetFromInitial() ;
+    
     public void describeKeyThatOpensSecret(char[] key, String initial, String target) {
         Analyzer.describeHowKeyOpensSecret(key, initial, target);
     }
-    
-    abstract public String tryObtainingTargetFromInitial() ;
     
     protected String canObtain(){
         
